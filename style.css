@@ -1,54 +1,29 @@
-/* Основни стилове */
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8d1d1; /* Бледо розов фон */
+    font-family: Arial, sans-serif;
     text-align: center;
+    background-color: #f4f4f4;
 }
-
-/* Хедър */
 header {
-    background-color: #ff7a7a; /* Розово */
-    padding: 20px;
+    background-color: #333;
     color: white;
+    padding: 20px;
 }
-
-h1 {
-    margin: 0;
-}
-
-/* Навигационно меню */
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
-
 nav ul li {
     display: inline;
     margin: 0 15px;
 }
-
 nav ul li a {
-    text-decoration: none;
     color: white;
-    font-weight: bold;
-    padding: 10px;
+    text-decoration: none;
 }
-
-nav ul li a:hover {
-    background-color: #ff5c5c; /* По-тъмно розово при ховър */
-    border-radius: 5px;
-}
-
-/* Профилна снимка */
-.profile {
-    margin-top: 30px;
-}
-
-.profile-image img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid #ff5c5c;
+section {
+    margin: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
