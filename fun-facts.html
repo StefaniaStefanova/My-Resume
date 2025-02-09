@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts | Stefania Stefanova</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffe4e1;
+            color: #333;
+            text-align: center;
+        }
+        .fun-facts {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .fact {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 20px 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-in-out;
+        }
+        .fact.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .icon {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fun Facts About Me 🎉</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="fun-facts.html">Fun Facts</a></li>
+                <li><a href="future.html">Future</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="fun-facts">
+        <div class="fact"><span class="icon">🎭</span> In the USA, I created my own garage club since I was under 21. It became the most popular in town with themed cultural nights! </div>
+        <div class="fact"><span class="icon">🌪️</span> I survived Hurricane Dorian without evacuating! </div>
+        <div class="fact"><span class="icon">🍺</span> I love beer! </div>
+        <div class="fact"><span class="icon">✍️</span> I write poetry and have started a book. </div>
+        <div class="fact"><span class="icon">🎲</span> I adore board games, belote, puzzles, and backgammon. </div>
+        <div class="fact"><span class="icon">🎤</span> I love singing and I’m really good at it… but I’m too shy to sing in front of people. </div>
+        <div class="fact"><span class="icon">🦄</span> I'm obsessed with unicorns and pink stuff—I've spent an entire paycheck on cute accessories before. </div>
+        <div class="fact"><span class="icon">🌊</span> I can do almost every water sport… but I can't swim! </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const facts = document.querySelectorAll(".fact");
+            facts.forEach((fact, index) => {
+                setTimeout(() => {
+                    fact.classList.add("visible");
+                }, index * 300);
+            });
+        });
+    </script>
+</body>
+</html>
