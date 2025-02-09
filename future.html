@@ -3,31 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education | Stefania Stefanova</title>
+    <title>Future | Stefania Stefanova</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4; 
+            color: #333; 
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #f1f1f1; 
+        }
+        h1 {
+            font-size: 36px;
+        }
+        h2 {
+            font-size: 28px;
+            color: #444; 
+        }
+        h3 {
+            font-size: 22px;
+            color: #444; 
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-in-out;
+        }
+        p.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .icon {
+            font-size: 24px;
+        }
+        .section-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: left;
+        }
+        .future-vision {
+            background-color: white; 
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .future-vision h3 {
+            color: #333; 
+        }
+        .future-vision ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .future-vision li {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .future-vision .icon {
+            color: #ff66b3;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>My Education 📚</h1>
+        <h1>My Future Career Plans 🌟</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="fun-facts.html">Fun Facts</a></li>
-                <li><a href="future.html">Future</a></li>
+                <li><a href="index.html" style="color: white;">Home</a></li>
+                <li><a href="education.html" style="color: white;">Education</a></li>
+                <li><a href="experience.html" style="color: white;">Experience</a></li>
+                <li><a href="fun-facts.html" style="color: white;">Fun Facts</a></li>
+                <li><a href="future.html" style="color: white;">Future</a></li>
             </ul>
         </nav>
     </header>
 
-    <section>
-        <h2>My Learning Journey 🚀</h2>
-        <ul>
-            <li>Front-End Test Automation (July 2024)</li>
-            <li>Programming Basics with C# (January 2023)</li>
-            <li>Software Technologies (May 2023)</li>
-            <li>... (и добави още курсове)</li>
-        </ul>
+    <section class="section-content">
+        <h2>My Vision for the Future 🚀</h2>
+
+        <div class="future-vision">
+            <h3><span class="icon">🌈</span> The QA Leader I Aspire to Be</h3>
+            <p>In the near future, I see myself as a successful QA professional who has grown into a strong leader of a dynamic and diverse team. I’ll be managing projects that challenge and inspire me, working on unique, cutting-edge solutions. My role will involve mentoring newcomers to the field, helping them develop skills and confidence in testing and automation. My focus will be on continued growth, expanding my knowledge in testing methodologies, technologies, and industry best practices.</p>
+        </div>
+
+        <div class="future-vision">
+            <h3><span class="icon">🏡</span> A Personal Dream Come True</h3>
+            <p>I will have built a beautiful, cozy pink house with a lovely garden where I can relax and unwind after busy days of work. My home will be a haven where my family and I can enjoy life’s little moments. I will make sure to spend quality time with my loved ones while continuing to focus on my career and helping my team grow.</p>
+        </div>
+
+        <div class="future-vision">
+            <h3><span class="icon">🌍</span> Growing My Team Globally</h3>
+            <p>As I expand my QA team, I’ll grow it internationally, hiring talent from different countries to bring diverse perspectives. This global team will work on innovative and collaborative projects, and we’ll share our knowledge across borders. Travel will become an essential part of our workflow as we meet in person to discuss ideas, attend conferences, and exchange experiences to become even more productive.</p>
+        </div>
+
+        <div class="future-vision">
+            <h3><span class="icon">✈️</span> Travel and Exchange Knowledge</h3>
+            <p>We’ll travel together to attend industry events, conferences, and workshops. This will allow us to stay updated on the latest trends in technology and QA practices. We’ll also visit different countries to build relationships, exchange experiences, and learn from the best in the industry. Through these travels, we’ll keep evolving and improving as a team, never stopping our quest for growth and success.</p>
+        </div>
+
+        <div class="future-vision">
+            <h3><span class="icon">💪</span> Never Stop Growing</h3>
+            <p>Continuous development is my personal motto. I will never stop learning new things—whether it’s mastering new tools, keeping up with new testing trends, or learning about different cultures through travel and work experiences. I aim to be a role model for my team, encouraging them to keep developing both professionally and personally.</p>
+        </div>
     </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const paragraphs = document.querySelectorAll("p");
+            paragraphs.forEach((paragraph, index) => {
+                setTimeout(() => {
+                    paragraph.classList.add("visible");
+                }, index * 300);
+            });
+        });
+    </script>
 </body>
 </html>
