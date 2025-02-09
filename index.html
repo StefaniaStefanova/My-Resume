@@ -5,6 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome | Stefania Stefanova</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 36px;
+        }
+        h2 {
+            font-size: 28px;
+            color: #444;
+        }
+        h3 {
+            font-size: 22px;
+            color: #444;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-in-out;
+        }
+        p.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .section-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: left;
+        }
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section h3 {
+            font-size: 24px;
+            color: #333;
+        }
+        .section p {
+            font-size: 16px;
+            color: #555;
+        }
+        .icon {
+            font-size: 30px;
+            color: #ff66b3;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -22,10 +85,38 @@
 
     <section>
         <h2>Hello! I'm Stefania 👋</h2>
-        <p>Welcome to my personal website! Here you'll find information about my studies, work experience, fun facts about me, and my future goals. Have fun exploring! 🚀</p>
+        <p>Welcome to my personal website! Here you can explore more about my educational background, professional experiences, fun facts, and future career goals. Dive in and let's get to know each other! 🚀</p>
     </section>
+
+    <section class="section">
+        <h3><span class="icon">🎓</span> Education</h3>
+        <p>In this section, you can learn more about the courses I've completed and the skills I've acquired. From programming basics to test automation, I’ve pursued a path of continuous learning to stay ahead in the tech world.</p>
+    </section>
+
+    <section class="section">
+        <h3><span class="icon">💼</span> Experience</h3>
+        <p>Want to know about my professional journey? Here you’ll find details about my work experience, including roles in project management, quality assurance, and team leadership. My career has been a mix of hands-on work and continuous growth.</p>
+    </section>
+
+    <section class="section">
+        <h3><span class="icon">🎉</span> Fun Facts</h3>
+        <p>This section is all about the fun side of me! I’ll share quirky facts, hobbies, and personal interests that make me who I am beyond the professional world. Let's have some fun!</p>
+    </section>
+
+    <section class="section">
+        <h3><span class="icon">🌟</span> Future</h3>
+        <p>What does the future hold? In this section, I’ll share my career goals and personal dreams. I envision myself growing as a leader in QA, helping others, and traveling around the world with my team to make an impact in the industry.</p>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const paragraphs = document.querySelectorAll("p");
+            paragraphs.forEach((paragraph, index) => {
+                setTimeout(() => {
+                    paragraph.classList.add("visible");
+                }, index * 300);
+            });
+        });
+    </script>
 </body>
 </html>
-
-
-
