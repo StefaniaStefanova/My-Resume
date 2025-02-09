@@ -5,6 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experience | Stefania Stefanova</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffe4e1;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #f1c6b4;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        h2 {
+            font-size: 28px;
+            color: #f06292;
+        }
+        h3 {
+            font-size: 22px;
+            color: #f06292;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-in-out;
+        }
+        p.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .icon {
+            font-size: 24px;
+        }
+        /* Нов стил за анимация на заглавията и параграфите */
+        .section-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,45 +71,67 @@
         </nav>
     </header>
 
-    <section>
+    <section class="section-content">
         <h2>My Professional Journey 🚀</h2>
 
-        <h3>Deputy Manager | Pakom-P (Present)</h3>
-        <p>As a Deputy Manager, I am responsible for overseeing the company’s digital presence and marketing strategies. 
-           My role involves **website development using WordPress, SEO optimization, and social media management** across multiple platforms. 
-           I ensure effective advertising campaigns, coordinate online branding, and maintain smooth business operations. 
-           Additionally, I handle project planning, team coordination, and workflow optimization to enhance productivity and brand reach.</p>
+        <div class="job">
+            <h3><span class="icon">🏢</span> Deputy Manager | Pakom-P (Present)</h3>
+            <p>As a Deputy Manager, I am responsible for overseeing the company’s digital presence and marketing strategies. 
+            My role involves **website development using WordPress, SEO optimization, and social media management** across multiple platforms. 
+            I ensure effective advertising campaigns, coordinate online branding, and maintain smooth business operations. 
+            Additionally, I handle project planning, team coordination, and workflow optimization to enhance productivity and brand reach.</p>
+        </div>
 
-        <h3>Supervisor | Pulse Fitness </h3>
-        <p>Managed the largest **Pulse Fitness** facility in Bulgaria, overseeing a large team of **trainers, receptionists, bartenders, and cleaning staff**. 
-           My responsibilities included monitoring daily operations, ensuring service quality, and optimizing workflow efficiency. 
-           I was responsible for staff training, performance evaluation, and problem-solving in a high-demand environment. 
-           This experience strengthened my leadership abilities, organizational skills, and capacity to manage diverse teams effectively.</p>
+        <div class="job">
+            <h3><span class="icon">💪</span> Supervisor | Pulse Fitness </h3>
+            <p>Managed the largest **Pulse Fitness** facility in Bulgaria, overseeing a large team of **trainers, receptionists, bartenders, and cleaning staff**. 
+            My responsibilities included monitoring daily operations, ensuring service quality, and optimizing workflow efficiency. 
+            I was responsible for staff training, performance evaluation, and problem-solving in a high-demand environment. 
+            This experience strengthened my leadership abilities, organizational skills, and capacity to manage diverse teams effectively.</p>
+        </div>
 
-        <h3>Manager | Bar&Dinner "Casa-Nova" (2022 - 2024)</h3>
-        <p>Leading a team of 10, I was responsible for overseeing daily operations, ensuring high-quality service, and maintaining efficiency. 
-           I managed scheduling, supervised kitchen and service staff, and optimized workflow to enhance customer satisfaction. 
-           This role required strong problem-solving skills, quick decision-making, and adaptability in a fast-paced environment. 
-           I developed leadership skills, improved my ability to handle high-pressure situations, and strengthened my attention to detail.</p>
+        <div class="job">
+            <h3><span class="icon">🍽️</span> Manager | Bar&Dinner "Casa-Nova" (2022 - 2024)</h3>
+            <p>Leading a team of 10, I was responsible for overseeing daily operations, ensuring high-quality service, and maintaining efficiency. 
+            I managed scheduling, supervised kitchen and service staff, and optimized workflow to enhance customer satisfaction. 
+            This role required strong problem-solving skills, quick decision-making, and adaptability in a fast-paced environment. 
+            I developed leadership skills, improved my ability to handle high-pressure situations, and strengthened my attention to detail.</p>
+        </div>
 
-        <h3>Office Assistant | BNP Paribas (2020 - 2021)</h3>
-        <p>Worked in a professional corporate setting, providing administrative support to a high-performing insurance claims team. 
-           My responsibilities included organizing and verifying documentation, ensuring compliance with company policies, and assisting in office management tasks. 
-           This experience refined my analytical skills, attention to detail, and ability to work with confidential information. 
-           I also enhanced my communication skills by coordinating with various departments and handling sensitive client data.</p>
+        <div class="job">
+            <h3><span class="icon">📑</span> Office Assistant | BNP Paribas (2020 - 2021)</h3>
+            <p>Worked in a professional corporate setting, providing administrative support to a high-performing insurance claims team. 
+            My responsibilities included organizing and verifying documentation, ensuring compliance with company policies, and assisting in office management tasks. 
+            This experience refined my analytical skills, attention to detail, and ability to work with confidential information. 
+            I also enhanced my communication skills by coordinating with various departments and handling sensitive client data.</p>
+        </div>
 
-        <h3>Shop Assistant | Sugar Kingdom, USA (Summer 2019)</h3>
-        <p>Participating in the Work & Travel program in the USA was a unique cultural and professional adventure. 
-           I lived with an American family, adapting to their customs and daily life while gaining valuable experience in a retail environment. 
-           My role involved customer service, inventory management, and promotional activities in a fast-paced store. 
-           This experience helped me build adaptability, develop excellent interpersonal skills, and learn how to work efficiently with diverse people and cultures.</p>
+        <div class="job">
+            <h3><span class="icon">🍭</span> Shop Assistant | Sugar Kingdom, USA (Summer 2019)</h3>
+            <p>Participating in the Work & Travel program in the USA was a unique cultural and professional adventure. 
+            I lived with an American family, adapting to their customs and daily life while gaining valuable experience in a retail environment. 
+            My role involved customer service, inventory management, and promotional activities in a fast-paced store. 
+            This experience helped me build adaptability, develop excellent interpersonal skills, and learn how to work efficiently with diverse people and cultures.</p>
+        </div>
 
-        <h3>Server | Happy London (2021 - 2022)</h3>
-        <p>Moving to London for work was both an exciting challenge and a valuable learning experience. 
-           I quickly adapted to a new culture and work environment, managing diverse customer needs in a busy international setting. 
-           My role required excellent communication, multitasking, and teamwork skills to ensure smooth service and customer satisfaction. 
-           This experience deepened my cultural awareness, problem-solving abilities, and confidence in handling dynamic and high-pressure situations.</p>
-
+        <div class="job">
+            <h3><span class="icon">🍽️</span> Server | Happy London (2021 - 2022)</h3>
+            <p>Moving to London for work was both an exciting challenge and a valuable learning experience. 
+            I quickly adapted to a new culture and work environment, managing diverse customer needs in a busy international setting. 
+            My role required excellent communication, multitasking, and teamwork skills to ensure smooth service and customer satisfaction. 
+            This experience deepened my cultural awareness, problem-solving abilities, and confidence in handling dynamic and high-pressure situations.</p>
+        </div>
     </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const paragraphs = document.querySelectorAll("p");
+            paragraphs.forEach((paragraph, index) => {
+                setTimeout(() => {
+                    paragraph.classList.add("visible");
+                }, index * 300);
+            });
+        });
+    </script>
 </body>
 </html>
