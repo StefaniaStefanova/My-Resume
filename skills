@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | Stefania Stefanova</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #f1f1f1;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        h2 {
+            font-size: 28px;
+            color: #444;
+        }
+        h3 {
+            font-size: 22px;
+            color: #444;
+        }
+        section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: left;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-in-out;
+        }
+        li.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Skills 🏆</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" style="color: white;">Home</a></li>
+                <li><a href="education.html" style="color: white;">Education</a></li>
+                <li><a href="experience.html" style="color: white;">Experience</a></li>
+                <li><a href="fun-facts.html" style="color: white;">Fun Facts</a></li>
+                <li><a href="future.html" style="color: white;">Future</a></li>
+                <li><a href="skills.html" style="color: white;">Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Technical Skills 💻</h2>
+        <ul>
+            <li><strong>Programming Languages:</strong> C#, JavaScript, HTML/CSS</li>
+            <li><strong>Software Development:</strong> Software Development Lifecycle, Git, GitHub</li>
+            <li><strong>Quality Assurance:</strong> Test Cases, Bug Reporting, Bug Identification, Unit Testing, Test Management</li>
+            <li><strong>Networks & Systems:</strong> Computer Systems, Operating Systems, Networks, Internet Protocols</li>
+            <li><strong>Software Architectures:</strong> Understanding of Software Architectures, Containers</li>
+            <li><strong>Tools:</strong> Jira, Visual Studio, Postman</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Soft Skills 🤝</h2>
+        <ul>
+            <li><strong>Positive Attitude:</strong> Consistently maintaining a positive outlook, fostering a vibrant work atmosphere.</li>
+            <li><strong>Team Player:</strong> Collaborating effectively within teams, contributing to collective success.</li>
+            <li><strong>Problem-solving:</strong> Ability to analyze situations and find effective solutions.</li>
+            <li><strong>Enthusiastic:</strong> Infusing enthusiasm into tasks, motivating team members, and embracing challenges with a smile.</li>
+            <li><strong>Adaptability:</strong> Easily adapting to various team dynamics and tasks, ensuring seamless collaboration.</li>
+            <li><strong>Time Management:</strong> Efficiently managing tasks and meeting deadlines.</li>
+            <li><strong>Attention to Detail:</strong> Thoroughness in tasks, ensuring accuracy and quality.</li>
+        </ul>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const listItems = document.querySelectorAll("li");
+            listItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add("visible");
+                }, index * 300);
+            });
+        });
+    </script>
+</body>
+</html>
