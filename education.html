@@ -113,7 +113,7 @@
 
         .btn-certificate {
             display: inline-block;
-            background-color: #006400;
+            background-color: #28a745; /* зелен бутон */
             color: white;
             padding: 8px 16px;
             margin-top: 8px;
@@ -124,7 +124,7 @@
         }
 
         .btn-certificate:hover {
-            background-color: #004d00;
+            background-color: #1e7e34; /* по-тъмен зелен при hover */
         }
 
         footer {
@@ -159,65 +159,65 @@
     </header>
 
     <section>
-        <h2>My Learning Journey 🚀</h2>
+        <h2>My Education 📚</h2>
 
         <div class="course">
             <h3>Front-End Test Automation (July 2024)</h3>
             <p>Selenium IDE, Selenium WebDriver, Appium Mobile Testing</p>
-            <a href="https://softuni.bg/certificates/details/225029/0f0f014d" target="_blank">View Certificate</a>
+            <a href="https://softuni.bg/certificates/details/225029/0f0f014d" target="_blank" class="btn-certificate">View Certificate</a>
         </div>
 
         <div class="course">
             <h3>Programming Basics with C# (January 2023)</h3>
             <p>Conditional Statements, Loops, Arrays, Methods</p>
-            <a href="https://softuni.bg/certificates/details/159203/b81cb27d" target="_blank">View Certificate</a>
+            <a href="https://softuni.bg/certificates/details/159203/b81cb27d" target="_blank" class="btn-certificate">View Certificate</a>
         </div>
 
         <div class="course">
             <h3>Software Technologies (May 2023)</h3>
             <p>Computer Systems, Operating Systems, Networks, Programming Languages, Databases, Git and GitHub</p>
-            <a href="https://softuni.bg/certificates/details/176562/e02429a3" target="_blank">View Certificate</a>
+            <a href="https://softuni.bg/certificates/details/176562/e02429a3" target="_blank" class="btn-certificate">View Certificate</a>
         </div>
 
         <div class="course">
             <h3>Programming Fundamentals and Unit Testing (September 2023)</h3>
             <p>Data Types, Conditional Statements, Loops, Arrays, Unit Testing</p>
-            <a href="https://softuni.bg/certificates/details/192735/76de35ae" target="_blank">View Certificate</a>
+            <a href="https://softuni.bg/certificates/details/192735/76de35ae" target="_blank" class="btn-certificate">View Certificate</a>
         </div>
 
         <div class="course">
             <h3>Programming Advanced for QA (November 2023)</h3>
             <p>Strings and Text Processing, Regular Expressions, OOP Principles</p>
-            <a href="https://softuni.bg/certificates/details/200256/056bb402" target="_blank">View Certificate</a>
+            <a href="https://softuni.bg/certificates/details/200256/056bb402" target="_blank" class="btn-certificate">View Certificate</a>
         </div>
 
         <div class="course">
             <h3>Back-End Technologies Basics (January 2024)</h3>
             <p>JSON, YAML, XML, Unit Testing with JavaScript, RESTful API, Docker</p>
-            <a href="https://softuni.bg/certificates/details/207750/55397161" target="_blank">View Certificate</a>
+            <a href="https://softuni.bg/certificates/details/207750/55397161" target="_blank" class="btn-certificate">View Certificate</a>
         </div>
 
         <div class="course">
             <h3>Front-End Technologies Basics (May 2024)</h3>
             <p>HTML, CSS, JavaScript Fundamentals, Remote Databases, qUnit, Playwright</p>
-            <a href="https://softuni.bg/certificates/details/220374/c59186c3" target="_blank">View Certificate</a>
+            <a href="https://softuni.bg/certificates/details/220374/c59186c3" target="_blank" class="btn-certificate">View Certificate</a>
         </div>
 
         <div class="course">
             <h3>Front-End Test Automation (March 2024)</h3>
             <p>API Testing with RestSharp, Postman, Performance Testing with JMeter, K6</p>
-            <a href="https://softuni.bg/certificates/details/225029/0f0f014d" target="_blank">View Certificate</a>
+            <a href="https://softuni.bg/certificates/details/225029/0f0f014d" target="_blank" class="btn-certificate">View Certificate</a>
         </div>
 
         <div class="course">
             <h3>QA Automation Engineer</h3>
-            <a href="https://softuni.bg/certificates/details/225975/0b0625ad" target="_blank">View Certificate</a>
+            <a href="https://softuni.bg/certificates/details/225975/0b0625ad" target="_blank" class="btn-certificate">View Certificate</a>
         </div>
 
         <div class="course">
             <h3>WordPress Website Building with Divi (April 2025)</h3>
             <p>WordPress installation, Divi Theme customization, layout building, responsive design, and website deployment via cPanel</p>
-            <a href="https://softuni.bg/certificates/details/225975/0b0625ad" target="_blank">View Certificate</a>
+            <a href="https://softuni.bg/certificates/details/225975/0b0625ad" target="_blank" class="btn-certificate">View Certificate</a>
         </div>
 
         <div class="course">
@@ -225,7 +225,6 @@
             <p>Currently pursuing a degree at the University of Insurance and Finance, Sofia. This program combines the study of business psychology, human behavior, and effective human resources management. I have completed all coursework and only have the final state exam remaining, which I hope to take and successfully pass in the near future.</p>
         </div>
 
-        <!-- Skills Section -->
         <div class="skills">
             <h3>Skills Gained 🏆</h3>
             <ul>
@@ -244,26 +243,30 @@
         </div>
     </section>
 
+    <footer>
+         <p>&copy; 2025 Stefania Stefanova | Designed with ❤️ by me</p>
+    </footer>
+
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const paragraphs = document.querySelectorAll("p");
-            paragraphs.forEach((paragraph, index) => {
-                setTimeout(() => {
-                    paragraph.classList.add("visible");
-                }, index * 300);
-            });
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
 
-            const hamburger = document.getElementById("hamburger");
-            const navLinks = document.getElementById("nav-links");
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
 
-            hamburger.addEventListener("click", () => {
-                navLinks.classList.toggle("show");
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('visible');
+                }
             });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('p').forEach(p => {
+            observer.observe(p);
         });
     </script>
-
-    <footer>
-        <p>&copy; 2025 Stefania Stefanova | Designed with ❤️ by me</p>
-    </footer>
 </body>
 </html>
+
