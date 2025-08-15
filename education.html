@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education | Stefania Stefanova</title>
+    <title>Education | My Personal Website</title>
     <link rel="stylesheet" href="style.css">
     <style>
         body {
@@ -16,7 +16,7 @@
         }
 
         header {
-            background-color: #006400;
+            background-color: #006400; 
             color: white;
             padding: 15px 20px;
             display: flex;
@@ -74,18 +74,27 @@
 
         section {
             padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
         }
 
         h2 {
             font-size: 28px;
             color: #004d00;
-            margin-bottom: 30px;
+            text-align: center;
         }
 
-        h3 {
-            font-size: 22px;
-            color: #004d00;
-            margin-bottom: 10px;
+        .course, .skills {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .course h3, .skills h3 {
+            color: #006400;
         }
 
         p {
@@ -102,31 +111,19 @@
             transform: translateY(0);
         }
 
-        .course {
-            background-color: white;
-            padding: 15px 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: left;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .certificate-btn {
+        .btn-certificate {
             display: inline-block;
             background-color: #006400;
             color: white;
-            padding: 10px 20px;
-            margin-top: 10px;
+            padding: 8px 16px;
+            margin-top: 8px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 500;
             transition: background-color 0.3s;
         }
 
-        .certificate-btn:hover {
+        .btn-certificate:hover {
             background-color: #004d00;
         }
 
@@ -135,6 +132,7 @@
             color: white;
             padding: 10px 0;
             margin-top: 30px;
+            text-align: center;
         }
     </style>
 </head>
@@ -161,48 +159,81 @@
     </header>
 
     <section>
-        <h2>My Learning Journey 🚀</h2>
+        <h2>My Education 📚</h2>
+
+        <div class="course">
+            <h3>Front-End Test Automation (July 2024)</h3>
+            <p>Selenium IDE, Selenium WebDriver, Appium Mobile Testing</p>
+            <a href="https://softuni.bg/certificates/details/225029/0f0f014d" target="_blank" class="btn-certificate">View Certificate</a>
+        </div>
 
         <div class="course">
             <h3>Programming Basics with C# (January 2023)</h3>
             <p>Conditional Statements, Loops, Arrays, Methods</p>
-            <a href="https://softuni.bg/certificates/details/159203/b81cb27d" target="_blank" class="certificate-btn">View Certificate</a>
+            <a href="https://softuni.bg/certificates/details/159203/b81cb27d" target="_blank" class="btn-certificate">View Certificate</a>
         </div>
 
         <div class="course">
             <h3>Software Technologies (May 2023)</h3>
             <p>Computer Systems, Operating Systems, Networks, Programming Languages, Databases, Git and GitHub</p>
-            <a href="https://softuni.bg/certificates/details/176562/e02429a3" target="_blank" class="certificate-btn">View Certificate</a>
+            <a href="https://softuni.bg/certificates/details/176562/e02429a3" target="_blank" class="btn-certificate">View Certificate</a>
         </div>
 
         <div class="course">
-            <h3>Front-End Test Automation (July 2024)</h3>
-            <p>Selenium IDE, Selenium WebDriver, Appium Mobile Testing</p>
-            <a href="https://softuni.bg/certificates/details/225029/0f0f014d" target="_blank" class="certificate-btn">View Certificate</a>
+            <h3>Programming Fundamentals and Unit Testing (September 2023)</h3>
+            <p>Data Types, Conditional Statements, Loops, Arrays, Unit Testing</p>
+            <a href="https://softuni.bg/certificates/details/192735/76de35ae" target="_blank" class="btn-certificate">View Certificate</a>
         </div>
 
         <div class="course">
-            <h3>JavaScript Advanced (March 2023)</h3>
-            <p>Objects, Functions, DOM Manipulation, Events, Fetch API</p>
-            <a href="https://softuni.bg/certificates/details/162390/abcd1234" target="_blank" class="certificate-btn">View Certificate</a>
+            <h3>Programming Advanced for QA (November 2023)</h3>
+            <p>Strings and Text Processing, Regular Expressions, OOP Principles</p>
+            <a href="https://softuni.bg/certificates/details/200256/056bb402" target="_blank" class="btn-certificate">View Certificate</a>
         </div>
 
         <div class="course">
-            <h3>Database Basics (April 2023)</h3>
-            <p>SQL Queries, Database Design, Relationships, CRUD Operations</p>
-            <a href="https://softuni.bg/certificates/details/164500/abcd5678" target="_blank" class="certificate-btn">View Certificate</a>
+            <h3>Back-End Technologies Basics (January 2024)</h3>
+            <p>JSON, YAML, XML, Unit Testing with JavaScript, RESTful API, Docker</p>
+            <a href="https://softuni.bg/certificates/details/207750/55397161" target="_blank" class="btn-certificate">View Certificate</a>
         </div>
 
         <div class="course">
-            <h3>HTML & CSS Basics (December 2022)</h3>
-            <p>Semantic HTML, Flexbox, Grid, Responsive Design, Styling Pages</p>
-            <a href="https://softuni.bg/certificates/details/157800/abcd9101" target="_blank" class="certificate-btn">View Certificate</a>
+            <h3>Front-End Technologies Basics (May 2024)</h3>
+            <p>HTML, CSS, JavaScript Fundamentals, Remote Databases, qUnit, Playwright</p>
+            <a href="https://softuni.bg/certificates/details/220374/c59186c3" target="_blank" class="btn-certificate">View Certificate</a>
         </div>
 
         <div class="course">
-            <h3>Object-Oriented Programming with C# (February 2024)</h3>
-            <p>Classes, Objects, Encapsulation, Inheritance, Polymorphism</p>
-            <a href="https://softuni.bg/certificates/details/210400/abcd1112" target="_blank" class="certificate-btn">View Certificate</a>
+            <h3>Front-End Test Automation (March 2024)</h3>
+            <p>API Testing with RestSharp, Postman, Performance Testing with JMeter, K6</p>
+            <a href="https://softuni.bg/certificates/details/225029/0f0f014d" target="_blank" class="btn-certificate">View Certificate</a>
+        </div>
+
+        <div class="course">
+            <h3>QA Automation Engineer</h3>
+            <a href="https://softuni.bg/certificates/details/225975/0b0625ad" target="_blank" class="btn-certificate">View Certificate</a>
+        </div>
+
+        <div class="course">
+            <h3>WordPress Website Building with Divi (April 2025)</h3>
+            <p>WordPress installation, Divi Theme customization, layout building, responsive design, and website deployment via cPanel</p>
+            <a href="https://softuni.bg/certificates/details/225975/0b0625ad" target="_blank" class="btn-certificate">View Certificate</a>
+        </div>
+
+        <div class="course">
+            <h3>Bachelor's in Business Psychology & Human Resources (2021-2024)</h3>
+            <p>Currently pursuing a degree at the University of Insurance and Finance, Sofia. This program combines the study of business psychology, human behavior, and effective human resources management. I have completed all coursework and only have the final state exam remaining.</p>
+        </div>
+
+        <div class="skills">
+            <h3>Skills Gained 🏆</h3>
+            <ul>
+                <li><strong>Test Automation Tools:</strong> Selenium WebDriver, Appium, Playwright, RestSharp, Postman</li>
+                <li><strong>Programming Languages:</strong> C#, JavaScript, Python basics</li>
+                <li><strong>Software Development:</strong> Git, GitHub, Unit Testing, Agile methodologies</li>
+                <li><strong>Web Development:</strong> HTML, CSS, WordPress, Divi</li>
+                <li><strong>Other Skills:</strong> Communication, teamwork, problem-solving, continuous learning</li>
+            </ul>
         </div>
 
     </section>
