@@ -3,147 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome | Stefania Stefanova</title>
+    <title>My Personal Website | Stefania Stefanova</title>
     <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #e6f4ea; /* светло зелено */
+            background-color: #d8f5d8; /* светло зелен фон */
             color: #333;
-            margin: 0;
-            padding: 0;
             text-align: center;
-        }
-
-        header {
-            background-color: #006400; /* тъмно зелено */
-            color: white;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        header h1 {
-            font-size: 24px;
             margin: 0;
         }
-
+        header {
+            background-color: #004d00; /* тъмно зелено меню */
+            color: white;
+            padding: 20px;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            font-size: 28px;
+            margin: 0;
+        }
         nav ul {
             list-style: none;
             padding: 0;
-            margin: 0;
+            margin: 10px 0 0 0;
             display: flex;
-            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
-
+        nav ul li {
+            margin: 0 15px;
+        }
         nav ul li a {
             color: white;
             text-decoration: none;
             font-weight: 500;
+            transition: color 0.3s;
         }
-
-        /* Hamburger меню */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
+        nav ul li a:hover {
+            color: #a6f0a6;
         }
-
-        .hamburger div {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-        }
-
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                width: 100%;
-                display: none;
-                margin-top: 10px;
-            }
-            nav ul.show {
-                display: flex;
-            }
-            .hamburger {
-                display: flex;
-            }
-        }
-
         section {
             padding: 40px 20px;
         }
-
-        h2 {
-            font-size: 28px;
-            color: #004d00;
-        }
-
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #333;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease-in-out;
-        }
-
-        p.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
         .profile-img {
             border-radius: 50%;
             width: 150px;
             height: 150px;
             object-fit: cover;
-            border: 5px solid #006400;
+            border: 5px solid #004d00;
             margin-bottom: 20px;
         }
-
-        .contact-buttons {
+        .buttons {
             margin-top: 20px;
         }
-
-        .contact-buttons a {
+        .buttons a {
             display: inline-block;
-            background-color: #006400;
-            color: white;
-            padding: 10px 20px;
+            padding: 10px 25px;
             margin: 5px;
-            border-radius: 8px;
+            background-color: #004d00;
+            color: white;
             text-decoration: none;
+            border-radius: 8px;
             font-weight: 500;
             transition: background-color 0.3s;
         }
-
-        .contact-buttons a:hover {
-            background-color: #004d00;
+        .buttons a:hover {
+            background-color: #006600;
         }
-
         footer {
-            background-color: #004d00;
-            color: #b0f2b6; /* по-светъл и четлив цвят за текста */
+            background-color: #004d00; /* тъмно зелено */
+            color: white; /* четлив текст */
             padding: 10px 0;
             margin-top: 30px;
+            font-weight: 500;
         }
-
     </style>
 </head>
 <body>
     <header>
         <h1>My Personal Website</h1>
-        <div class="hamburger" id="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
         <nav>
-            <ul id="nav-links">
+            <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="education.html">Education</a></li>
                 <li><a href="experience.html">Experience</a></li>
@@ -160,33 +102,13 @@
         <h2>Hello! I'm Stefania Stefanova 👋</h2>
         <img src="IMG-c5106c010d349ac3d6d4f92dba5cc87d-V.jpg" alt="Stefania Stefanova" class="profile-img">
         <p>Motivated professional eager to embrace new challenges and opportunities. With a strong background in teamwork, communication, and problem-solving, I’m confident in my ability to contribute effectively to any dynamic and forward-thinking team.</p>
-        <p>I’m passionate about continuous learning and growth, and I’m excited to bring my skills and dedication to new projects and environments. Here, you'll find everything about my education, work experience, and future goals. Enjoy exploring! 🚀</p>
-
-        <div class="contact-buttons">
+        <p>I’m passionate about continuous learning and growth, and I’m excited to bring my skills and dedication to new projects and environments. Explore my website to see my education, experience, projects, and future aspirations. 🚀</p>
+        
+        <div class="buttons">
             <a href="contact.html">Contact</a>
             <a href="projects.html">Projects</a>
         </div>
     </section>
-
-    <script>
-        // Появяване на параграфите
-        document.addEventListener("DOMContentLoaded", function() {
-            const paragraphs = document.querySelectorAll("p");
-            paragraphs.forEach((paragraph, index) => {
-                setTimeout(() => {
-                    paragraph.classList.add("visible");
-                }, index * 300);
-            });
-
-            // Hamburger menu toggle
-            const hamburger = document.getElementById("hamburger");
-            const navLinks = document.getElementById("nav-links");
-
-            hamburger.addEventListener("click", () => {
-                navLinks.classList.toggle("show");
-            });
-        });
-    </script>
 
     <footer>
         <p>&copy; 2025 Stefania Stefanova | Designed with ❤️ by me</p>
