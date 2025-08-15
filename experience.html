@@ -6,121 +6,94 @@
     <title>Experience | Stefania Stefanova</title>
     <link rel="stylesheet" href="style.css" />
     <style>
+        /* --- Основни стилове --- */
         body {
             font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
             background-color: #f4f4f4;
             color: #333;
-            margin: 0;
         }
 
         header {
-            background-color: #2a9d8f;
-            color: white;
-            padding: 20px;
-            border-radius: 0 0 15px 15px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #1abc9c;
+            padding: 20px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
-        header h1 {
-            font-size: 28px;
-            margin: 0;
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
         }
 
-        nav ul {
+        .navbar ul {
             list-style: none;
-            padding: 0;
-            margin: 0;
             display: flex;
             gap: 15px;
+            margin: 0;
+            padding: 0;
         }
 
-        nav ul li a {
+        .navbar ul li a {
             color: white;
             text-decoration: none;
             font-weight: 600;
-            transition: 0.3s;
         }
 
-        nav ul li a:hover {
-            color: #e9c46a;
+        .navbar ul li a.active {
+            text-decoration: underline;
         }
 
         .hamburger {
             display: none;
             flex-direction: column;
             cursor: pointer;
-            gap: 5px;
         }
 
-        .hamburger div {
-            width: 25px;
+        .hamburger span {
             height: 3px;
-            background-color: white;
+            width: 25px;
+            background: white;
+            margin: 4px 0;
+            border-radius: 2px;
+            transition: 0.3s;
         }
 
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-                flex-direction: column;
-                background-color: #2a9d8f;
-                position: absolute;
-                top: 70px;
-                right: 20px;
-                padding: 10px;
-                border-radius: 10px;
-            }
-
-            nav ul.active {
-                display: flex;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-        }
-
-        .section-content {
+        /* --- Контейнер за съдържанието --- */
+        .container {
             max-width: 900px;
-            margin: 30px auto;
+            margin: 40px auto;
             padding: 0 20px;
         }
 
-        .job {
-            background-color: white;
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 25px;
-            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1abc9c;
         }
 
-        .job:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 6px 12px rgba(0,0,0,0.15);
+        .job {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         .job h3 {
-            display: flex;
-            align-items: center;
-            font-size: 20px;
-            color: #264653;
-        }
-
-        .job h3 .icon {
-            margin-right: 10px;
-            font-size: 24px;
+            margin-top: 0;
         }
 
         .job p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #555;
             opacity: 0;
             transform: translateY(20px);
             transition: all 0.6s ease-in-out;
+            line-height: 1.6;
         }
 
         .job p.visible {
@@ -128,46 +101,58 @@
             transform: translateY(0);
         }
 
-        .certificate-btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 8px 15px;
-            background-color: #2a9d8f;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .certificate-btn:hover {
-            background-color: #21867a;
-        }
-
+        /* --- Футър --- */
         footer {
             text-align: center;
-            margin-top: 40px;
-            padding: 15px 0;
-            background-color: #264653;
-            color: white;
+            padding: 20px;
+            color: #777;
             font-size: 14px;
+        }
+
+        /* --- Хамбургер меню за мобилни --- */
+        @media screen and (max-width: 768px) {
+            .navbar ul {
+                position: absolute;
+                top: 70px;
+                right: 0;
+                background: #1abc9c;
+                flex-direction: column;
+                width: 200px;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in;
+                border-radius: 0 0 0 15px;
+            }
+
+            .navbar ul.open {
+                transform: translateX(0);
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hamburger.toggle span:nth-child(1) {
+                transform: rotate(45deg) translate(5px,5px);
+            }
+
+            .hamburger.toggle span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.toggle span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px,-5px);
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>My Work Experience 💼</h1>
-        <div class="hamburger" id="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <nav>
-            <ul id="nav-menu">
+        <div class="logo">Stefania Stefanova</div>
+        <nav class="navbar">
+            <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="education.html">Education</a></li>
-                <li><a href="experience.html">Experience</a></li>
+                <li><a href="experience.html" class="active">Experience</a></li>
                 <li><a href="future.html">Future</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
@@ -175,85 +160,73 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
-    <section class="section-content">
+    <div class="container">
         <h2>My Professional Journey 🚀</h2>
 
         <div class="job">
-            <h3><span class="icon">📑</span> Intern | BNP Paribas, Sofia, Bulgaria </h3>
-            <p>
-                My first office job, where I gained invaluable experience and insights into the corporate world. As an intern in the claims department, I provided administrative support by organizing and verifying documentation, ensuring compliance with company policies, and assisting with various office management tasks. I also helped other departments as needed, showing flexibility and eagerness to learn.
-            </p>
-            <p>
-                After completing my internship, I received a certificate recognizing my contribution and skills. 
-                <a class="certificate-btn" href="#">View Certificate</a>
-            </p>
-            <p>
-                Shortly after, I was invited to participate in a high-profile project involving the screening of individuals to identify potential terrorism risks, which enhanced my understanding of compliance, security, and data confidentiality.
-            </p>
-            <p>
-                I greatly admired BNP Paribas' organized and professional work culture, which helped me grow both personally and professionally.
-            </p>
+            <h3>📑 Intern | BNP Paribas, Sofia, Bulgaria</h3>
+            <p>My first office job, where I gained invaluable experience and insights into the corporate world. As an intern in the claims department, I provided administrative support by organizing and verifying documentation, ensuring compliance with company policies, and assisting with various office management tasks.</p>
+            <p>After completing my internship, I received a certificate recognizing my contribution and skills. Shortly after, I was invited to participate in a high-profile project involving the screening of individuals to identify potential terrorism risks.</p>
+            <p>I greatly admired BNP Paribas' organized and professional work culture, which helped me grow both personally and professionally.</p>
         </div>
 
         <div class="job">
-            <h3><span class="icon">🏢</span> Deputy Manager | Pakom-P </h3>
-            <p>
-                As a Deputy Manager, I am responsible for overseeing the company’s digital presence, operations, and team coordination. My role includes <strong>building and maintaining WordPress websites using the Divi theme</strong>, <strong>managing website hosting through cPanel</strong>, and <strong>implementing and maintaining security systems</strong>. I also handle <strong>domain management</strong> and lead <strong>digital marketing efforts</strong>, including SEO optimization and social media campaigns.
-            </p>
+            <h3>🏢 Deputy Manager | Pakom-P</h3>
+            <p>Responsible for overseeing the company’s digital presence, operations, and team coordination. My role includes building and maintaining WordPress websites using the Divi theme, managing website hosting through cPanel, and implementing security systems like video surveillance, access control barriers, and intercoms.</p>
+            <p>I also handle domain management, digital marketing efforts, SEO optimization, social media management, and advertising campaigns. Additionally, I organize personnel schedules, delegate tasks, and ensure smooth operations within the team.</p>
         </div>
 
         <div class="job">
-            <h3><span class="icon">💪</span> Supervisor | Pulse Fitness</h3>
-            <p>
-                Managed the largest Pulse Fitness facility in Bulgaria, overseeing a large team of trainers, receptionists, bartenders, and cleaning staff. My responsibilities included monitoring daily operations, ensuring service quality, and optimizing workflow efficiency.
-            </p>
+            <h3>💪 Supervisor | Pulse Fitness</h3>
+            <p>Managed the largest Pulse Fitness facility in Bulgaria, overseeing a large team of trainers, receptionists, bartenders, and cleaning staff. Responsibilities included monitoring daily operations, ensuring service quality, and optimizing workflow efficiency. This experience strengthened my leadership and organizational skills.</p>
         </div>
 
         <div class="job">
-            <h3><span class="icon">🍽️</span> Manager | Bar&Dinner "Casa-Nova" </h3>
-            <p>
-                Leading a team of 10, I was responsible for overseeing daily operations, ensuring high-quality service, and maintaining efficiency. I managed scheduling, supervised kitchen and service staff, and optimized workflow to enhance customer satisfaction.
-            </p>
+            <h3>🍽️ Manager | Bar&Dinner "Casa-Nova"</h3>
+            <p>Led a team of 10, overseeing daily operations, ensuring high-quality service, and maintaining efficiency. Managed scheduling, supervised kitchen and service staff, and optimized workflow to enhance customer satisfaction. Developed leadership skills and improved my ability to handle high-pressure situations.</p>
         </div>
 
         <div class="job">
-            <h3><span class="icon">🍭</span> Shop Assistant | Sugar Kingdom, USA </h3>
-            <p>
-                Participating in the Work & Travel program in the USA was a unique cultural and professional adventure. I lived with an American family, adapting to their customs and daily life while gaining valuable experience in a retail environment.
-            </p>
+            <h3>🍭 Shop Assistant | Sugar Kingdom, USA</h3>
+            <p>Participated in the Work & Travel program in the USA, living with an American family and gaining valuable experience in a retail environment. Responsibilities included customer service, inventory management, and promotional activities in a fast-paced store.</p>
         </div>
 
         <div class="job">
-            <h3><span class="icon">🍽️</span> Server | Happy London </h3>
-            <p>
-                Moving to London for work was both an exciting challenge and a valuable learning experience. I quickly adapted to a new culture and work environment, managing diverse customer needs in a busy international setting.
-            </p>
+            <h3>🍽️ Server | Happy London</h3>
+            <p>Moved to London for work, adapting to a new culture and work environment while managing diverse customer needs. Developed excellent communication, multitasking, and teamwork skills, deepening my cultural awareness and problem-solving abilities.</p>
         </div>
-    </section>
-
-    <script>
-        // Paragraph animation
-        document.addEventListener("DOMContentLoaded", function () {
-            const paragraphs = document.querySelectorAll(".job p");
-            paragraphs.forEach((paragraph, index) => {
-                setTimeout(() => {
-                    paragraph.classList.add("visible");
-                }, index * 300);
-            });
-
-            // Hamburger toggle
-            const hamburger = document.getElementById("hamburger");
-            const navMenu = document.getElementById("nav-menu");
-            hamburger.addEventListener("click", () => {
-                navMenu.classList.toggle("active");
-            });
-        });
-    </script>
+    </div>
 
     <footer>
         <p>&copy; 2025 Stefania Stefanova | Designed with ❤️ by me</p>
     </footer>
+
+    <script>
+        // Параграфи с анимация
+        document.addEventListener("DOMContentLoaded", function () {
+            const paragraphs = document.querySelectorAll(".job p");
+            paragraphs.forEach((p, i) => {
+                setTimeout(() => {
+                    p.classList.add("visible");
+                }, i * 300);
+            });
+
+            // Хамбургер меню
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".navbar ul");
+
+            hamburger.addEventListener("click", () => {
+                navMenu.classList.toggle("open");
+                hamburger.classList.toggle("toggle");
+            });
+        });
+    </script>
 </body>
 </html>
