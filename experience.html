@@ -1,96 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Experience | My Personal Website</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | My Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #e6f4ea;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #006400; 
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                display: none;
+                margin-top: 10px;
+            }
+            nav ul.show {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #004d00;
+            text-align: center;
+        }
+
+        .job {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .job h3 {
+            color: #006400;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-in-out;
+        }
+
+        p.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        footer {
+            background-color: #004d00;
+            color: white;
+            padding: 10px 0;
+            margin-top: 30px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-  
-  <header>
-    <div class="logo">My Personal Website</div>
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="experience.html" class="active">Experience</a></li>
-        <li><a href="future.html">Future</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="fun-facts.html">Fun Facts</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </header>
+    <header>
+        <h1>My Personal Website</h1>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="future.html">Future</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="fun-facts.html">Fun Facts</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  
-  <div class="container">
-    <h2>My Professional Journey 🚀</h2>
+    <section>
+        <h2>My Professional Journey 🚀</h2>
 
-    <div class="job">
-      <h3>📑 Intern | BNP Paribas, Sofia, Bulgaria</h3>
-      <p>My first office job, where I gained invaluable experience and insights into the corporate world. As an intern in the claims department, I provided administrative support by organizing and verifying documentation, ensuring compliance with company policies, and assisting with various office management tasks.</p>
-      <p>After completing my internship, I received a certificate recognizing my contribution and skills. Shortly after, I was invited to participate in a high-profile project involving the screening of individuals to identify potential terrorism risks.</p>
-      <p>I greatly admired BNP Paribas' organized and professional work culture, which helped me grow both personally and professionally.</p>
-    </div>
+        <div class="job">
+            <h3>📑 Intern | BNP Paribas, Sofia, Bulgaria</h3>
+            <p>My first office job, where I gained invaluable experience and insights into the corporate world. As an intern in the claims department, I provided administrative support by organizing and verifying documentation, ensuring compliance with company policies, and assisting with various office management tasks.</p>
+            <p>After completing my internship, I received a certificate recognizing my contribution and skills. Shortly after, I was invited to participate in a high-profile project involving the screening of individuals to identify potential terrorism risks.</p>
+            <p>I greatly admired BNP Paribas' organized and professional work culture, which helped me grow both personally and professionally.</p>
+        </div>
 
-    <div class="job">
-      <h3>🏢 Deputy Manager | Pakom-P</h3>
-      <p>Responsible for overseeing the company’s digital presence, operations, and team coordination. My role includes building and maintaining WordPress websites using the Divi theme, managing website hosting through cPanel, and implementing security systems like video surveillance, access control barriers, and intercoms.</p>
-      <p>I also handle domain management, digital marketing efforts, SEO optimization, social media management, and advertising campaigns. Additionally, I organize personnel schedules, delegate tasks, and ensure smooth operations within the team.</p>
-    </div>
+        <div class="job">
+            <h3>🏢 Deputy Manager | Pakom-P</h3>
+            <p>Responsible for overseeing the company’s digital presence, operations, and team coordination. My role includes building and maintaining WordPress websites using the Divi theme, managing website hosting through cPanel, and implementing security systems like video surveillance, access control barriers, and intercoms.</p>
+            <p>I also handle domain management, digital marketing efforts, SEO optimization, social media management, and advertising campaigns. Additionally, I organize personnel schedules, delegate tasks, and ensure smooth operations within the team.</p>
+        </div>
 
-    <div class="job">
-      <h3>💪 Supervisor | Pulse Fitness</h3>
-      <p>Managed the largest Pulse Fitness facility in Bulgaria, overseeing a large team of trainers, receptionists, bartenders, and cleaning staff. Responsibilities included monitoring daily operations, ensuring service quality, and optimizing workflow efficiency. This experience strengthened my leadership and organizational skills.</p>
-    </div>
+        <div class="job">
+            <h3>💪 Supervisor | Pulse Fitness</h3>
+            <p>Managed the largest Pulse Fitness facility in Bulgaria, overseeing a large team of trainers, receptionists, bartenders, and cleaning staff. Responsibilities included monitoring daily operations, ensuring service quality, and optimizing workflow efficiency. This experience strengthened my leadership and organizational skills.</p>
+        </div>
 
-    <div class="job">
-      <h3>🍽️ Manager | Bar&Dinner "Casa-Nova"</h3>
-      <p>Led a team of 10, overseeing daily operations, ensuring high-quality service, and maintaining efficiency. Managed scheduling, supervised kitchen and service staff, and optimized workflow to enhance customer satisfaction. Developed leadership skills and improved my ability to handle high-pressure situations.</p>
-    </div>
+        <div class="job">
+            <h3>🍽️ Manager | Bar&Dinner "Casa-Nova"</h3>
+            <p>Led a team of 10, overseeing daily operations, ensuring high-quality service, and maintaining efficiency. Managed scheduling, supervised kitchen and service staff, and optimized workflow to enhance customer satisfaction. Developed leadership skills and improved my ability to handle high-pressure situations.</p>
+        </div>
 
-    <div class="job">
-      <h3>🍭 Shop Assistant | Sugar Kingdom, USA</h3>
-      <p>Participated in the Work & Travel program in the USA, living with an American family and gaining valuable experience in a retail environment. Responsibilities included customer service, inventory management, and promotional activities in a fast-paced store.</p>
-    </div>
+        <div class="job">
+            <h3>🍭 Shop Assistant | Sugar Kingdom, USA</h3>
+            <p>Participated in the Work & Travel program in the USA, living with an American family and gaining valuable experience in a retail environment. Responsibilities included customer service, inventory management, and promotional activities in a fast-paced store.</p>
+        </div>
 
-    <div class="job">
-      <h3>🍽️ Server | Happy London</h3>
-      <p>Moved to London for work, adapting to a new culture and work environment while managing diverse customer needs. Developed excellent communication, multitasking, and teamwork skills, deepening my cultural awareness and problem-solving abilities.</p>
-    </div>
-  </div>
+        <div class="job">
+            <h3>🍽️ Server | Happy London</h3>
+            <p>Moved to London for work, adapting to a new culture and work environment while managing diverse customer needs. Developed excellent communication, multitasking, and teamwork skills, deepening my cultural awareness and problem-solving abilities.</p>
+        </div>
+    </section>
 
-  
-  <footer>
-    <p>&copy; 2025 My Personal Website | Designed with ❤️ by me</p>
-  </footer>
+    <footer>
+         <p>&copy; 2025 Stefania Stefanova | Designed with ❤️ by me</p>
+    </footer>
 
-  <script>
-    
-    document.addEventListener("DOMContentLoaded", function () {
-      const paragraphs = document.querySelectorAll(".job p");
-      paragraphs.forEach((p, i) => {
-        setTimeout(() => {
-          p.classList.add("visible");
-        }, i * 300);
-      });
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
 
-      
-      const hamburger = document.querySelector(".hamburger");
-      const navMenu = document.querySelector(".navbar ul");
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
 
-      hamburger.addEventListener("click", () => {
-        navMenu.classList.toggle("open");
-        hamburger.classList.toggle("toggle");
-      });
-    });
-  </script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('p').forEach(p => {
+            observer.observe(p);
+        });
+    </script>
 </body>
 </html>
