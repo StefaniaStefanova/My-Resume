@@ -16,7 +16,7 @@
         }
 
         header {
-            background-color: #006400;
+            background-color: #006400; 
             color: white;
             padding: 15px 20px;
             display: flex;
@@ -86,29 +86,35 @@
             margin-bottom: 30px;
         }
 
-        .skills-card {
+        .skills {
             background-color: white;
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
             margin-bottom: 20px;
+        }
+
+        .skills h3 {
+            color: #004d00;
+            margin-bottom: 15px;
+        }
+
+        .skills ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .skills p {
+            font-size: 16px;
+            line-height: 1.6;
             opacity: 0;
             transform: translateY(20px);
             transition: all 0.6s ease-in-out;
         }
 
-        .skills-card.visible {
+        .skills p.visible {
             opacity: 1;
             transform: translateY(0);
-        }
-
-        .skills-card h3 {
-            color: #006400;
-            margin-bottom: 10px;
-        }
-
-        .skills-card ul {
-            padding-left: 20px;
         }
 
         footer {
@@ -122,7 +128,7 @@
 </head>
 <body>
     <header>
-        <h1>My Skills 🏆</h1>
+        <h1>Stefania Stefanova</h1>
         <div class="hamburger" id="hamburger">
             <div></div>
             <div></div>
@@ -145,7 +151,8 @@
     <section>
         <h2>My Skills Journey 🚀</h2>
 
-        <div class="skills-card">
+        <!-- Technical Skills -->
+        <div class="skills">
             <h3>Technical Skills 💻</h3>
             <ul>
                 <li><strong>Test Automation Tools:</strong> Selenium WebDriver, Appium, Playwright, RestSharp, Postman, qUnit, NUnit</li>
@@ -161,13 +168,15 @@
             </ul>
         </div>
 
-        <div class="skills-card">
-            <h3>Soft Skills & Personal Traits 💡</h3>
+        <!-- Soft Skills -->
+        <div class="skills">
+            <h3>What Makes Me Unique 💡</h3>
+            <p>Throughout my international work experiences, I have developed strong adaptability, leadership, and communication skills. I thrive in fast-paced environments and enjoy working with diverse teams. My ability to quickly learn and adjust to new challenges has been key in every role I’ve had.</p>
             <ul>
                 <li><strong>Positive Attitude:</strong> Consistently maintaining a positive outlook, fostering a vibrant work atmosphere.</li>
                 <li><strong>Team Player:</strong> Collaborating effectively within teams, contributing to collective success.</li>
                 <li><strong>Problem-solving:</strong> Ability to analyze situations and find effective solutions.</li>
-                <li><strong>Enthusiastic:</strong> Infusing enthusiasm into tasks, motivating team members, embracing challenges with a smile.</li>
+                <li><strong>Enthusiastic:</strong> Infusing enthusiasm into tasks, motivating team members, and embracing challenges with a smile.</li>
                 <li><strong>Adaptability:</strong> Easily adapting to various team dynamics and tasks, ensuring seamless collaboration.</li>
                 <li><strong>Time Management:</strong> Efficiently managing tasks and meeting deadlines.</li>
                 <li><strong>Attention to Detail:</strong> Thoroughness in tasks, ensuring accuracy and quality.</li>
@@ -188,10 +197,10 @@
         });
 
         document.addEventListener("DOMContentLoaded", function() {
-            const cards = document.querySelectorAll(".skills-card");
-            cards.forEach((card, index) => {
+            const paragraphs = document.querySelectorAll(".skills p");
+            paragraphs.forEach((paragraph, index) => {
                 setTimeout(() => {
-                    card.classList.add("visible");
+                    paragraph.classList.add("visible");
                 }, index * 300);
             });
         });
